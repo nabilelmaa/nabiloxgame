@@ -17,7 +17,10 @@ function CountDown({ value }: CountDownProps) {
 
   return (
     <div className="p-2">
-      <span className="p-2 rounded-md border border-6 countdown font-mono text-3xl" style={{ "--value": String(count) } as React.CSSProperties}>
+      <span
+        className="p-2 text-white rounded-md border border-6 countdown font-mono text-3xl"
+        style={{ "--value": String(count) } as React.CSSProperties}
+      >
         <span></span>
       </span>
     </div>
