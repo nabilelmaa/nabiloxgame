@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Modal from "../components/Modal";
+import CountDown from "./CountDown";
 
 function Home() {
   const [counter, setCounter] = useState<number>(0);
@@ -24,7 +26,7 @@ function Home() {
     setCounter(0);
   };
   return (
-    <div className="flex justify-center items-center border border-6 flex-col-reverse">
+    <div className="flex justify-center items-center border border-6 flex-col-reverse bg-black">
       <div className="font-bold">Nabil@X!</div>
       <div className="p-6">
         <button
@@ -55,6 +57,9 @@ function Home() {
       {counter >= 5 && counter < 7 && <div className="p-2 text-green-300 font-bold">Very close!</div>}
       {counter >= 7 && counter < 10 && <div className="p-2 text-blue-600 font-bold">Excellent!</div>}
       {counter === 10 && <div className="p-2 text-green-600 font-bold">Well done!</div>}
+      <div>
+        <CountDown value={10} />
+      </div>
     </div>
   );
 }
